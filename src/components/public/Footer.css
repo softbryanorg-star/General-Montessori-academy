@@ -1,0 +1,26 @@
+.footer {
+  width: 100%;
+  background: var(--nav-bg);
+  color: var(--link);
+  padding: 1.5rem 0;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 0.95rem;
+}
+
+.footer-credit {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}

@@ -1,0 +1,20 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.admin-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  transition: margin-left 0.3s ease;
+}
+
+.admin-main.shifted {
+  margin-left: 240px;
+}
+
+.admin-content {
+  padding: 2rem;
+}

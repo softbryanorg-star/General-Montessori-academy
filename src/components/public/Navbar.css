@@ -1,0 +1,63 @@
+/* Light Theme (Default) */
+:root {
+  --bg: #ffffff;
+  --text: #0d1b2a;
+  --nav-bg: #0d1b2a;
+  --link: #e0e1dd;
+  --accent: #00b4d8;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg: #0b132b;
+  --text: #e0e1dd;
+  --nav-bg: #1c2541;
+  --link: #e0e1dd;
+  --accent: #5bc0be;
+}
+
+.navbar {
+  width: 100%;
+  background: var(--nav-bg);
+  padding: 1rem 0;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.navbar-links a {
+  color: var(--link);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover,
+.navbar-links a.active {
+  color: var(--accent);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: var(--link);
+}

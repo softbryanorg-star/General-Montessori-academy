@@ -1,3 +1,74 @@
 .dashboard {
-  padding: 20px;
+  padding: 2rem;
+}
+
+/* Header */
+.dashboard-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.dashboard-header p {
+  opacity: 0.7;
+}
+
+/* Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Cards */
+.dashboard-card {
+  padding: 1.5rem;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Card colors */
+.dashboard-card.blue {
+  background: linear-gradient(135deg, #1e88e5, #42a5f5);
+}
+
+.dashboard-card.green {
+  background: linear-gradient(135deg, #2e7d32, #66bb6a);
+}
+
+.dashboard-card.purple {
+  background: linear-gradient(135deg, #6a1b9a, #ab47bc);
+}
+
+.dashboard-card.orange {
+  background: linear-gradient(135deg, #ef6c00, #ff9800);
+}
+
+/* Icon */
+.card-icon svg {
+  font-size: 2.8rem;
+  color: white;
+}
+
+/* Text */
+.card-info h3 {
+  font-size: 2rem;
+  margin: 0;
+  color: white;
+}
+
+.card-info p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Loading */
+.dashboard-loading {
+  padding: 3rem;
+  text-align: center;
+  font-size: 1.2rem;
 }
