@@ -1,5 +1,5 @@
 import { Navigate, Outlet } from "react-router-dom";
-import { isAdminLoggedIn } from "../../../utils/adminAuth";
+import { isAdminLoggedIn } from "../../utilis/adminAuth";
 
 /**
  * Protects all admin routes.

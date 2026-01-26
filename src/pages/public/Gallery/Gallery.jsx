@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import publicApi from "../../../api/publicApi";
-import SEO from "../../../components/SEO/SEO";
+import SEO from "../../../components/SEO";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";

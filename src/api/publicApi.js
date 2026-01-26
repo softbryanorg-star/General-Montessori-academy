@@ -40,3 +40,6 @@ export const sendContactMessage = (data) => {
   return api.post("/contact", data);
 };
 
+// Default export: expose the axios instance for code that imports the module as `publicApi`
+export default api;
+

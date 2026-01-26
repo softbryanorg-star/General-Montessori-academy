@@ -12,7 +12,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import publicApi from "../../../api/publicApi";
-import SEO from "../../../components/SEO/SEO";
+import SEO from "../../../components/SEO";
 
 const Home = () => {
   // 1️⃣ State for backend data
@@ -60,6 +60,10 @@ const Home = () => {
     ],
   };
 
+  // react-slick may be imported as a module object depending on bundler interop.
+  // Support both `Slider` and `Slider.default` shapes.
+  const SlickSlider = Slider && (Slider.default ? Slider.default : Slider);
+
   return (
     <>
       {/* 4️⃣ SEO Injection from backend */}
@@ -106,13 +110,23 @@ const Home = () => {
         <section className="home-section">
           <h2>Our School in Pictures</h2>
 
-          <Slider {...gallerySettings}>
-            {gallery.map((img) => (
-              <div key={img._id} className="gallery-card">
-                <img src={img.imageUrl} alt={img.title || "School gallery"} />
-              </div>
-            ))}
-          </Slider>
+          {SlickSlider ? (
+            <SlickSlider {...gallerySettings}>
+              {gallery.map((img) => (
+                <div key={img._id} className="gallery-card">
+                  <img src={img.imageUrl} alt={img.title || "School gallery"} />
+                </div>
+              ))}
+            </SlickSlider>
+          ) : (
+            <div className="gallery-fallback">
+              {gallery.map((img) => (
+                <div key={img._id} className="gallery-card">
+                  <img src={img.imageUrl} alt={img.title || "School gallery"} />
+                </div>
+              ))}
+            </div>
+          )}
         </section>
 
         {/* ================= NEWS PREVIEW ================= */}

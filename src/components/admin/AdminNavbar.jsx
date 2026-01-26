@@ -2,8 +2,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import LogoutIcon from "@mui/icons-material/Logout";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
-import { useTheme } from "../../../theme/ThemeContext";
-import { logout } from "../../../utils/auth";
+import { useTheme } from "../../theme/ThemeContext";
+import { adminLogout } from "../../utilis/adminAuth";
 import "./AdminNavbar.css";
 
 const AdminNavbar = ({ toggleSidebar, setLoading }) => {
@@ -12,8 +12,7 @@ const AdminNavbar = ({ toggleSidebar, setLoading }) => {
   const handleLogout = () => {
     setLoading(true);
     setTimeout(() => {
-      logout();
-      window.location.href = "/admin/login";
+      adminLogout();
     }, 800);
   };
 

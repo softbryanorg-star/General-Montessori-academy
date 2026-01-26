@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import publicApi from "../../../api/publicApi";
-import SEO from "../../../components/SEO/SEO";
+import SEO from "../../../components/SEO";
 import "./News.css";
 
 const ITEMS_PER_PAGE = 6;

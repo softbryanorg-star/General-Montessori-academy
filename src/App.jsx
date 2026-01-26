@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 /* =========================
    PUBLIC LAYOUT COMPONENTS
@@ -16,7 +16,7 @@ import AdminRouteGuard from "./components/admin/AdminRouteGuard";
    PUBLIC PAGES
 ========================= */
 import Home from "./pages/public/Home/Home";
-import PageView from "./pages/public/PageView/PageView";
+import PageView from "./pages/public/Pageview/Pageview";
 import PublicNews from "./pages/public/News/News";
 import PublicGallery from "./pages/public/Gallery/Gallery";
 import Contact from "./pages/public/Contact/Contact";
@@ -34,7 +34,6 @@ import SchoolInfo from "./pages/admin/SchoolInfo/SchoolInfo";
 
 const App = () => {
   return (
-    <Router>
       <Routes>
 
         {/* =========================
@@ -118,7 +117,6 @@ const App = () => {
         </Route>
 
       </Routes>
-    </Router>
   );
 };
 

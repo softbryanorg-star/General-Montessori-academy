@@ -4,7 +4,7 @@ import "./PageView.css";
 
 import { motion } from "framer-motion";
 import publicApi from "../../../api/publicApi";
-import SEO from "../../components/SEO/SEO";
+import SEO from "../../../components/SEO";
 
 const PageView = () => {
   // 1️⃣ Read slug from URL: /pages/:slug

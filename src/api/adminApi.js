@@ -122,3 +122,5 @@ Easy to test, easy to debug
 
 This is how enterprise dashboards are built.
 */
+
+export default api;
