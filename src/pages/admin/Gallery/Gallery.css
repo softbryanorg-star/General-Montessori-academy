@@ -1,3 +1,108 @@
-.gallery {
-  padding: 20px;
+.admin-gallery {
+  max-width: 1300px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Upload */
+.upload-form {
+  display: grid;
+  gap: 1rem;
+  background: var(--card-bg, #111);
+  padding: 1.5rem;
+  border-radius: 16px;
+}
+
+.upload-form input {
+  background: #1b1b1b;
+  color: #fff;
+  border: 1px solid #333;
+  padding: 0.8rem;
+  border-radius: 10px;
+}
+
+.upload-form button {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  border: none;
+  color: #fff;
+  padding: 0.8rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Grid */
+.gallery-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0.8rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.gallery-card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay span {
+  font-size: 0.9rem;
+}
+
+.overlay button {
+  background: #dc2626;
+  border: none;
+  color: #fff;
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+}
+
+/* Preview Modal */
+.preview-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: grid;
+  place-items: center;
+  z-index: 999;
+}
+
+.preview-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .upload-form {
+    padding: 1rem;
+  }
 }

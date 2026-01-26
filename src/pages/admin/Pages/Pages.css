@@ -1,3 +1,104 @@
-.pages {
-  padding: 20px;
+.pages-admin {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.pages-admin h1 {
+  margin-bottom: 1rem;
+}
+
+.page-form {
+  background: var(--card-bg, #111);
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: grid;
+  gap: 1rem;
+}
+
+.page-form input,
+.page-form textarea {
+  background: var(--input-bg, #1c1c1c);
+  color: var(--text, #fff);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 0.75rem;
+}
+
+.page-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.checkbox {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-actions button {
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.form-actions .cancel {
+  background: transparent;
+  border: 1px solid #555;
+  color: #aaa;
+}
+
+.page-list {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.page-card {
+  background: var(--card-bg, #111);
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-card h3 {
+  margin: 0;
+}
+
+.page-card small {
+  opacity: 0.6;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actions button {
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.actions .danger {
+  background: #b00020;
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .page-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
 }

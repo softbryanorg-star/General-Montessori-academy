@@ -1,3 +1,65 @@
-.pageview {
-  padding: 20px;
+.pageview-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2.5rem 1.5rem;
+  animation: fadeIn 0.6s ease;
+}
+
+/* ===== HEADER ===== */
+.pageview-header {
+  margin-bottom: 2rem;
+}
+
+.pageview-cover {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 1.5rem;
+}
+
+.pageview-header h1 {
+  font-size: 2.6rem;
+  line-height: 1.2;
+}
+
+/* ===== CONTENT ===== */
+.pageview-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Rich text safety styling */
+.pageview-content h2,
+.pageview-content h3 {
+  margin-top: 2rem;
+}
+
+.pageview-content p {
+  margin: 1rem 0;
+}
+
+.pageview-content ul {
+  padding-left: 1.5rem;
+}
+
+.pageview-content img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+}
+
+/* ===== STATES ===== */
+.pageview-loading,
+.pageview-error {
+  padding: 4rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .pageview-header h1 {
+    font-size: 2rem;
+  }
 }
