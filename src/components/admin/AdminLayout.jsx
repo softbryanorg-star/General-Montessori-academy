@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { Outlet } from "react-router-dom";
 import AdminSidebar from "./AdminSidebar";
 import AdminNavbar from "./AdminNavbar";
 import AdminLoader from "./AdminLoader";
 import "./AdminLayout.css";
 
-const AdminLayout = ({ children }) => {
+const AdminLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [loading, setLoading] = useState(false);
 
@@ -21,7 +22,7 @@ const AdminLayout = ({ children }) => {
         {loading && <AdminLoader />}
 
         <div className="admin-content">
-          {children}
+          <Outlet />
         </div>
       </div>
     </div>

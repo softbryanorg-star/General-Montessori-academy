@@ -13,7 +13,7 @@ const AdminSidebar = ({ isOpen }) => {
       <h2 className="sidebar-title">Admin Panel</h2>
 
       <nav className="sidebar-nav">
-        <NavLink to="/admin" end>
+        <NavLink to="/admin/dashboard" end>
           <DashboardIcon /> Dashboard
         </NavLink>
 

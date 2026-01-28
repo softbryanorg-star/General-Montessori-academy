@@ -170,6 +170,9 @@ const Pages = () => {
           placeholder="SEO Meta Description"
           value={form.metaDescription}
           onChange={handleChange}
+          data-gramm="false"
+          data-cke-ignore="true"
+          spellCheck={false}
         />
 
         <label className="checkbox">
