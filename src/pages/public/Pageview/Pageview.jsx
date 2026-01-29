@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "./PageView.css";
+import "./Pageview.css";
 
 import { motion } from "framer-motion";
 import publicApi from "../../../api/publicApi";
